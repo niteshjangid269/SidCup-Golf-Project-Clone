@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff; 
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 150px;
+    padding-top: 0px;
+    gap: 47px;
+    position: fixed;
+    z-index: 99;
+
+}
+#btn{
+    width: 700px;
+    display: flex;
+    justify-content: end;
+}
+#btn button{
+    
+    background-color: #000;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50px;
+    border-color: rgb(25, 196, 39);
+    border-style: double;
+    transition: all linear 0.8s;
+    
+}
+#btn button:hover{
+    background: linear-gradient(to left,yellow,green);
+    color: #000
+}
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all linear 0.4s;
+}
+#nav h4:hover{
+    color: color-mix(in hwb longer hue, yellow 20%, blue 30%);
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.329);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#page1 h1{
+    margin-bottom: 10px;
+    font-size: 130px;
+    font-family: gilroy;
+    position: relative;
+    color: rgba(71, 218, 238, 0.945);
+}
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 3px rgb(156, 45, 45);
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 800px;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+}
+/* #cursor{
+    background-color: rgb(149, 233, 80);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+} */
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    -webkit-text-stroke: 2px rgb(22, 190, 190);
+    margin-right: 10px;
+    font-weight: 700;
+    transition: all linear 0.3s;
+    font-family: Montserrat,sans-serif;
+    color: transparent;
+}
+#scroller h4:hover{
+    color: rgb(7, 185, 185);
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    margin-top: 150px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#about-us img{
+    height: 200px;
+    width: 230px;
+    border-radius: 10px;
+    margin: 30px;
+    transition: all linear 0.6s;
+
+}
+#about h5{
+    text-align: center;
+    font-size: 40px;
+    transition: all linear 0.3s;
+}
+#about p{
+    text-align: center;
+    font-size: 25px;
+    padding: 25px;
+    transition: all linear 0.3s;
+}
+#about p:hover{
+    color: rgb(220, 223, 61);
+}
+#about h5:hover{
+    color: rgb(219, 38, 38);
+}
+#about-us img:hover{
+    border: 3px solid rgb(218, 189, 26);
+}
+
+#card-container{
+    margin-top: 50px;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 80%;
+    width: 27%;
+    background-color: yellow;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease 0.6s;
+
+}
+#card1{
+    background-image: url("https://calderfieldsgolfrange.com/wp-content/uploads/2019/04/selection-bord.png");
+    background-size: cover;
+    background-position: center;
+}
+#card2{
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+    background-size: cover;
+    background-position: center;
+}
+#card3{
+    background-image: url("https://media.istockphoto.com/id/612728200/photo/young-golf-coach-correcting-golfers-swing-on-sunlit-course.jpg?s=612x612&w=0&k=20&c=agIEHXUY_ZTudpDjWdzleWi13a-Ub0mstOoQzadD4D4=");
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(98, 49, 153);
+    padding: 40px;
+    padding-top: 150px;
+    position: relative;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h5{
+    color: #b7d466;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+
+}
+.overlay p{
+    color: white;
+    font-size: 22px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,1,1,30deg);
+}
+
+#news-box{
+    margin-top: 80px;
+    height: 30vh;
+    background: linear-gradient(to left bottom,red,rgb(0,0,255));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#news-box img{
+    height: 100%;
+    mix-blend-mode:darken;
+    background-size: cover;
+    background-position: center;
+    width: 18%;
+}
+#news-box p{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    white-space: nowrap;
+}
